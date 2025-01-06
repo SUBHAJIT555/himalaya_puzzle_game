@@ -38,6 +38,24 @@
       <div id="modal-eye"></div>
       <div id="close-button">X</div>
     </div>
+    <div id="exit-button">
+      <h5>QUIT</h5>
+    </div>
   </body>
   <script src="assets/js/puzzle.js"></script>
+  <script>
+    function preventPinchZoom(event) {
+      if (event.touches.length > 1) {
+        event.preventDefault();
+      }
+    }
+
+    // Add event listeners to disable pinch-zoom
+    document.addEventListener("touchstart", preventPinchZoom, {
+      passive: false,
+    });
+    document.addEventListener("touchmove", preventPinchZoom, {
+      passive: false,
+    });
+       </script>
 </html>

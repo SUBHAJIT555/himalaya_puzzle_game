@@ -72,5 +72,20 @@
        gif.style.display="flex";
       }
     </script>
+    <script>
+      function preventPinchZoom(event) {
+        if (event.touches.length > 1) {
+          event.preventDefault();
+        }
+      }
+
+      // Add event listeners to disable pinch-zoom
+      document.addEventListener("touchstart", preventPinchZoom, {
+        passive: false,
+      });
+      document.addEventListener("touchmove", preventPinchZoom, {
+        passive: false,
+      });
+       </script>
   </body>
 </html>
