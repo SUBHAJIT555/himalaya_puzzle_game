@@ -276,7 +276,7 @@ height: 100vh;
   align-items: center;
 }
 #game-name img{
-  width: 80rem;
+  width: 60rem;
   margin-top: 40px;
   z-index: 99;
 }
