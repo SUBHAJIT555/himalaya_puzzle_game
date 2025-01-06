@@ -1294,7 +1294,8 @@ let loadFile;
   }; // loadFile
 } //  // scope for loadFile
 
-// Define an array of local image paths
+// Define an array of local image path
+
 const localImages = [
   "./assets/blocks/image1.png", // Adjust these paths to match your file structure
   "./assets/blocks/image2.png",
