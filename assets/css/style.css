@@ -25,73 +25,136 @@ width: 100vw;
 height: 100vh;
 
 }
-#introduction{
+#introduction {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: url(/assets/img/BG.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 #header-logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#header-logo img{
-  margin-top: 50px;
-  width: 18rem;
+
+#header-logo img {
+  margin-top: 20px;
+  width: 12rem; /* Adjusted size for smaller screens */
 }
-#game-title{
+
+#game-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
-#game-title img{
-  width: 60rem;
-  margin-top: 120px;
+
+#game-title img {
+  width: 45rem; /* Smaller size for better scaling */
+  margin-top: 50px;
 }
-#game-button{
+
+#game-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 50px;
 }
-#game-button a{
+
+#game-button a {
   font-family: var(--Bold-font);
-  font-size: 3rem;
+  font-size: 2rem;
   color: #045F62;
   text-decoration: none;
   border: 2px solid white;
   background-color: #fff;
-  padding: 10px 80px;
+  padding: 8px 60px;
   border-radius: 10px;
   transition: 0.5s;
   text-decoration: none;
   text-align: center;
-  /* margin-top: 50px; */
-
 }
-#game-button a:hover{
+
+#game-button a:hover {
   text-decoration: none;
 }
-#game-button h2{
+
+#game-button h2 {
   font-family: var(--SemiBold-font);
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 15px;
 }
-#game-button h2{
-  font-family: var(--SemiBold-font);
-  font-size: 2rem;
-  color: white;
-  text-align: center;
-  margin-top: 20px;
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  /* Styles for tablets */
+  #game-title img {
+    width: 35rem;
+    margin-top: 40px;
+  }
+
+  #game-button a {
+    font-size: 2.5rem;
+    padding: 10px 50px;
+  }
+
+  #header-logo img {
+    width: 10rem;
+  }
 }
+
+@media (max-width: 768px) {
+  /* Styles for smaller tablets and large phones */
+  #game-title img {
+    width: 25rem;
+    margin-top: 30px;
+  }
+
+  #game-button a {
+    font-size: 2rem;
+    padding: 8px 40px;
+  }
+
+  #header-logo img {
+    width: 8rem;
+  }
+
+  #game-button h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for mobile phones */
+  #game-title img {
+    width: 20rem;
+    margin-top: 20px;
+  }
+
+  #game-button a {
+    font-size: 1.5rem;
+    padding: 6px 30px;
+  }
+
+  #header-logo img {
+    width: 6rem;
+  }
+
+  #game-button h2 {
+    font-size: 1rem;
+  }
+}
+
 /* @media screen and (max-width: 2560px){
   #header-logo img{
     margin-top: 5%;
@@ -124,7 +187,7 @@ height: 100vh;
 
 /* -----INSTRUCTION PAGE CSS-----  */
 
-#instraction{
+#instraction {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -132,6 +195,10 @@ height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #inst-logo {
@@ -139,79 +206,175 @@ height: 100vh;
   justify-content: center;
   align-items: center;
 }
-#inst-logo img{
-  width: 10rem;
+
+#inst-logo img {
+  width: 8rem;
   margin-top: 10px;
 }
-#inst-heading{
+
+#inst-heading {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
-#inst-heading img{
-  width: 40rem;
+
+#inst-heading img {
+  width: 30rem;
   margin-top: 30px;
 }
-#inst-description{
+
+#inst-description {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 50px 250px;
-  padding: 40px ;
-  border-radius: 30px;
-  -webkit-box-shadow: 36px 34px 69px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 36px 34px 69px 0px rgba(0,0,0,0.75);
-  box-shadow: 36px 34px 69px 0px rgba(0,0,0,0.75);
+  margin: 20px;
+  padding: 30px;
+  border-radius: 20px;
+  -webkit-box-shadow: 36px 34px 69px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 36px 34px 69px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 36px 34px 69px 0px rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(0.8px);
   -webkit-backdrop-filter: blur(0.8px);
   background: #23679477;
+  width: 60%;
 }
-#inst-description h1{
+
+#inst-description h1 {
   font-family: var(--ExtraBold-font);
   text-align: left;
-  font-size: 50px;
+  font-size: 2.5rem;
   color: white;
   border-bottom: 4px solid white;
   text-shadow: 2px 2px 4px #000000;
 }
-#inst-description h3{
+
+#inst-description h3 {
   font-family: var(--SemiBold-font);
   text-align: left;
   margin-top: 20px;
-  font-size: 30px;
+  font-size: 1.5rem;
   color: white;
   text-shadow: 2px 2px 4px #000000;
-  
 }
-#inst-description h3 span{
+
+#inst-description h3 span {
   color: #00FF6A;
   font-family: var(--ExtraBold-font);
-  font-size: 40px;
+  font-size: 2rem;
 }
-#play-button{
+
+#play-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
-#play-button a{
+
+#play-button a {
   font-family: var(--Bold-font);
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #045F62;
   text-decoration: none;
   border: 2px solid white;
   background-color: #fff;
-  padding: 10px 80px;
+  padding: 10px 50px;
   border-radius: 10px;
   transition: 0.5s;
-  text-decoration: none;
   text-align: center;
-  -webkit-box-shadow: 36px 34px 69px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 36px 34px 69px 0px rgba(0,0,0,0.75);
-  box-shadow: 36px 34px 69px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 36px 34px 69px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 36px 34px 69px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 36px 34px 69px 0px rgba(0, 0, 0, 0.75);
 }
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  #inst-heading img {
+    width: 25rem;
+    margin-top: 20px;
+  }
+
+  #inst-description {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  #inst-description h1 {
+    font-size: 2rem;
+  }
+
+  #inst-description h3 {
+    font-size: 1.2rem;
+  }
+
+  #inst-description h3 span {
+    font-size: 1.8rem;
+  }
+
+  #play-button a {
+    font-size: 1.3rem;
+    padding: 10px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #inst-heading img {
+    width: 20rem;
+    margin-top: 20px;
+  }
+
+  #inst-description {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  #inst-description h1 {
+    font-size: 1.8rem;
+  }
+
+  #inst-description h3 {
+    font-size: 1rem;
+  }
+
+  #inst-description h3 span {
+    font-size: 1.5rem;
+  }
+
+  #play-button a {
+    font-size: 1rem;
+    padding: 8px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  #inst-heading img {
+    width: 15rem;
+    margin-top: 10px;
+  }
+
+  #inst-description {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  #inst-description h1 {
+    font-size: 1.5rem;
+  }
+
+  #inst-description h3 {
+    font-size: 0.9rem;
+  }
+
+  #inst-description h3 span {
+    font-size: 1.2rem;
+  }
+
+  #play-button a {
+    font-size: 0.8rem;
+    padding: 6px 20px;
+  }
+}
+
 /* @media screen and (max-width: 2560px){
   #inst-logo img{
     width: 30rem;

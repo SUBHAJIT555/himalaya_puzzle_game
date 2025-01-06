@@ -13,7 +13,7 @@ const timerDisplay = document.getElementById("timer");
 
 function startTimer() {
   clearInterval(timerInterval);
-  timeLeft = 90;
+  timeLeft = 75;
   updateTimerDisplay();
   timerInterval = setInterval(() => {
     timeLeft -= 1;
@@ -1456,20 +1456,21 @@ let events = []; // queue for events
       /* wait for choice of number of pieces */
 
       case 5: // Break the image into pieces
-        if (event && event.event === "breakIntoPieces") {
-          puzzle.nbPieces = 12; // Default number of pieces
-          puzzle.create(); // Create the puzzle with default shape (classic)
-          puzzle.scale();
-          puzzle.polyPieces.forEach((pp) => {
+    if (event && event.event === "breakIntoPieces") {
+        puzzle.nbPieces = 9; // Default number of pieces
+        puzzle.create(); // Create the puzzle with default shape (classic)
+        puzzle.scale();
+        puzzle.polyPieces.forEach((pp) => {
             pp.drawImage();
             pp.moveToInitialPlace();
-          });
-          puzzle.gameCanvas.style.top = puzzle.offsy + "px";
-          puzzle.gameCanvas.style.left = puzzle.offsx + "px";
-          puzzle.gameCanvas.style.display = "block";
-          state = 25;
-        }
-        break;
+        });
+        puzzle.gameCanvas.style.top = puzzle.offsy + "px";
+        puzzle.gameCanvas.style.left = puzzle.offsx + "px";
+        puzzle.gameCanvas.style.display = "block";
+        state = 25;
+    }
+    break;
+
 
       case 15:
         if (autoStart) event = { event: "nbpieces", nbpieces: 12 }; // auto start
