@@ -321,6 +321,9 @@ height: 100vh;
   margin-top: 30px;
   
 }
+#result-middle img{
+  width: 300px;
+}
 #result-bottom{
   display: flex;
   flex-direction: column;

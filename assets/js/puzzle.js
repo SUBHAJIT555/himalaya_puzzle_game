@@ -13,7 +13,7 @@ const timerDisplay = document.getElementById("timer");
 
 function startTimer() {
   clearInterval(timerInterval);
-  timeLeft = 6;
+  timeLeft = 90;
   updateTimerDisplay();
   timerInterval = setInterval(() => {
     timeLeft -= 1;
@@ -1433,17 +1433,25 @@ let events = []; // queue for events
     //        if (event) console.log (event);
     switch (state) {
       case 0: // Initial state
-        if (!puzzle.imageLoaded) return;
-        // Display the full image centered in the container
-        puzzle.container.innerHTML = ""; // Clear previous contents
-        tmpImage = document.createElement("img");
-        tmpImage.src = puzzle.srcImage.src;
-        puzzle.getContainerSize();
-        fitImage(tmpImage, puzzle.contWidth * 0.95, puzzle.contHeight * 0.95);
-        tmpImage.style.boxShadow = "4px 4px 4px rgba(0, 0, 0, 0.5)";
-        puzzle.container.appendChild(tmpImage);
-        state = 5;
-        setTimeout(() => events.push({ event: "breakIntoPieces" }), 2000); // Wait 2 seconds
+    if (!puzzle.imageLoaded) return;
+    // Display the full image centered in the container
+    puzzle.container.innerHTML = ""; // Clear previous contents
+    tmpImage = document.createElement("img");
+    tmpImage.src = puzzle.srcImage.src;
+    puzzle.getContainerSize();
+    fitImage(tmpImage, puzzle.contWidth * 0.95, puzzle.contHeight * 0.95);
+    tmpImage.style.boxShadow = "4px 4px 4px rgba(0, 0, 0, 0.5)";
+    puzzle.container.appendChild(tmpImage);
+    state = 5;
+
+    // Wait 2 seconds, then break into pieces and start the timer
+    setTimeout(() => {
+        events.push({ event: "breakIntoPieces" });
+        startTimer(); // Start the timer here
+    }, 2000);
+    break;
+
+        
         break;
       /* wait for choice of number of pieces */
 
@@ -1667,5 +1675,5 @@ puzzle = new Puzzle({ container: "forPuzzle" });
 autoStart = isMiniature();
 
 loadInitialFile();
-startTimer();
+
 requestAnimationFrame(animate);
