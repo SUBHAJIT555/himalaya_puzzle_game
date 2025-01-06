@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <link rel="stylesheet" href="assets/css/game.css" />
+  </head>
+  <body style="position: relative">
+    <audio id="background-music" autoplay loop >
+      <source src="/assets/music/bg.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="forPuzzle"></div>
+    <div id="timer"></div>
+    <ul id="menu" style="display: none">
+      <li>&#x2630;</li>
+      <li>default image</li>
+      <li>load image</li>
+      <li>
+        shape:
+        <select id="shape">
+          <option value="1" selected>classic</option>
+          <option value="2">triangle</option>
+          <option value="3">round</option>
+          <option value="4">straight</option>
+        </select>
+      </li>
+      <li>12 pieces</li>
+      <!-- <li>25 pieces</li>
+      <li>50 pieces</li>
+      <li>100 pieces</li>
+      <li>200 pieces</li> -->
+    </ul>
+    <div>
+      <img id="eye" src="/assets/img/eye.svg" alt="" />
+    </div>
+    <div id="eye-button">
+      <div id="modal-eye"></div>
+      <div id="close-button">X</div>
+    </div>
+  </body>
+  <script src="assets/js/puzzle.js"></script>
+</html>

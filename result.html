@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="overlay-gif">
+      <img src="/assets/img/Confetti3.gif" alt="Celebration GIF" />
+    </div>
+    <div id="result">
+      <div id="game-name">
+        <img src="/assets/img/liv52_Logo.webp" alt="" />
+      </div>
+      <div id="game-result">
+        <div id="result-top">
+          <h1 id="result-heading">"Congratulations!"</h1>
+          <h2 id="resultMessage">You Won the Prize</h2>
+          <h2 id="resultMessage2">for Redefining Liver Care with Liv.52 GNX</h2>
+        </div>
+        <div id="result-middle">
+          <img id="resultImage" src="/assets/img/Liver_win_icon.svg" alt="" />
+        </div>
+        <div id="result-bottom">
+          <a href="index.html">HOME</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        const overlay = document.getElementById("overlay-gif");
+        const gifDuration = 3000;
+        setTimeout(() => {
+          overlay.style.display = "none";
+        }, gifDuration);
+      };
+    </script>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const message = params.get("message") || "No message provided.";
+      if (message === "Loss") {
+       var result = document.getElementById("result-heading");
+       result.innerHTML = "<h1>&ldquo; Don't give up! &rdquo;</h1>"
+       
+       var resultMessage = document.getElementById("resultMessage");
+       resultMessage.innerHTML ="<h2>Better luck next time!</h2>";
+       var resultMessageTwo = document.getElementById("resultMessage2");
+       resultMessageTwo.innerHTML ="<h2></h2>";
+
+       document.getElementById("resultImage").src = "/assets/img/Liver_lose_icon.svg";
+
+       var gif =document.getElementById("overlay-gif");
+       gif.style.display="none";
+
+
+      } else {
+        var result = document.getElementById("result-heading");
+       result.innerHTML = "<h1>&ldquo; Congratulations! &rdquo;</h1>"
+       
+       var resultMessage = document.getElementById("resultMessage");
+       resultMessage.innerHTML ="<h2>You Won the Prize</h2>";
+       var resultMessageTwo = document.getElementById("resultMessage2");
+       resultMessageTwo.innerHTML ="<h2>for Redefining Liver Care with Liv.52 GNX</h2>";
+
+       document.getElementById("resultImage").src = "/assets/img/Liver_win_icon.svg";
+
+       var gif =document.getElementById("overlay-gif");
+       gif.style.display="flex";
+      }
+    </script>
+  </body>
+</html>
