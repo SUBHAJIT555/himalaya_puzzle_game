@@ -13,7 +13,7 @@ const timerDisplay = document.getElementById("timer");
 
 function startTimer() {
   clearInterval(timerInterval);
-  timeLeft = 6;
+  timeLeft = 60;
   updateTimerDisplay();
   timerInterval = setInterval(() => {
     timeLeft -= 1;
