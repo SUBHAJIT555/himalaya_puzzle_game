@@ -222,3 +222,12 @@ body {
   padding: 10px;
 } */
 
+#preview-view{
+  width: 250px;
+  position: absolute;
+  top: 55%;
+  right: 1%;
+}
+#preview-view img{
+  width: 100%;
+}

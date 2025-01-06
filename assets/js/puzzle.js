@@ -1320,29 +1320,29 @@ function loadInitialFile() {
 }
 
 function eyeModal(img){
-  let modal = document.getElementById('modal-eye');
+  let modal = document.getElementById('preview-view');
   modal.innerHTML = `<img src="${img}" alt="">`
 
 
 
 }
 
-let eye = document.getElementById("eye");
-if (eye) {
-    eye.addEventListener('click', function() {
-        let eyeOpen = document.getElementById("eye-button");
-        if (eyeOpen) {
-            eyeOpen.style.display = "flex"
-        }
-    });
-}
-let cross = document.getElementById("close-button");
-cross.addEventListener('click',function(){
-  let eyeopen = document.getElementById("eye-button");
-        if (eyeopen) {
-            eyeopen.style.display = "none"
-        }
-})
+// let eye = document.getElementById("eye");
+// if (eye) {
+//     eye.addEventListener('click', function() {
+//         let eyeOpen = document.getElementById("eye-button");
+//         if (eyeOpen) {
+//             eyeOpen.style.display = "flex"
+//         }
+//     });
+// }
+// let cross = document.getElementById("close-button");
+// cross.addEventListener('click',function(){
+//   let eyeopen = document.getElementById("eye-button");
+//         if (eyeopen) {
+//             eyeopen.style.display = "none"
+//         }
+// })
 
 
 //-----------------------------------------------------------------------------
