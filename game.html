@@ -8,7 +8,7 @@
   </head>
   <body style="position: relative">
     <audio id="background-music" autoplay loop >
-      <source src="/assets/music/bg.mp3" type="audio/mpeg" />
+      <source id="background-music" src="/assets/music/bg.mp3" type="audio/mpeg" />
     </audio>
     <div id="forPuzzle"></div>
     <div id="timer"></div>
@@ -63,4 +63,11 @@
       passive: false,
     });
        </script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('background-music');
+    audio.muted = false;
+    audio.play().catch((error) => console.error('Playback error:', error));
+  });
+</script>
 </html>
