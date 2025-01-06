@@ -99,15 +99,16 @@ body {
   overflow: hidden;
   position: absolute;
 }
-@media screen and (max-width: 2560px){
+
+
   #forPuzzle {
     position: relative;
     width: 80%;
     height: 85%;
-    margin-top: 100px;
-    margin-left: 120px;
+    margin-top: 50px;
+    margin-left: 50px;
     padding: 20px;
-    /* border-radius: 30px; */
+    border-radius: 30px; 
   -webkit-box-shadow: 36px 34px 69px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 36px 34px 69px 0px rgba(0,0,0,0.75);
   box-shadow: 36px 34px 69px 0px rgba(0,0,0,0.75);
@@ -115,26 +116,26 @@ body {
   -webkit-backdrop-filter: blur(0.8px);
   background: #23679477;
   }   
-  /* #timer {
+  #timer {
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 10px;
-    right: 90px;
+    top: 0px;
+    right: 50px;
     font-size: 20px;
     background: rgb(131,58,180);
     background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
     box-shadow: 5px 5px 10px #045F62;
     padding: 10px;
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
     color: white;
     font-family: var(--ExtraBold-font);
-    font-size: 50px;
+    font-size: 30px;
     
-  } */
+  }
   #eye-button{
     position: absolute;
     width: 100%;
@@ -147,7 +148,7 @@ body {
     align-items: center;
   }
   #modal-eye{
-    /* background-color: red; */
+   
   }
   #modal-eye img{
     scale: 1;
@@ -170,14 +171,24 @@ body {
     justify-content: center;
     align-items: center;
   }
-}
+  #eye{
+    position: absolute;
+    top: 15%;
+    right: 67px;
+    background-color: #045F62;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    padding: 10px;
+  }
+
 
 
 #modal-eye{
   /* background-color: red; */
 }
 
-#eye{
+/* #eye{
   position: absolute;
   top: 15%;
   right: 67px;
@@ -186,5 +197,5 @@ body {
   width: 70px;
   border-radius: 50%;
   padding: 10px;
-}
+} */
 

@@ -13,7 +13,7 @@ const timerDisplay = document.getElementById("timer");
 
 function startTimer() {
   clearInterval(timerInterval);
-  timeLeft = 60;
+  timeLeft = 600;
   updateTimerDisplay();
   timerInterval = setInterval(() => {
     timeLeft -= 1;
@@ -25,6 +25,9 @@ function startTimer() {
     }
   }, 1000);
 }
+
+
+
 
 function updateTimerDisplay() {
   timerDisplay.textContent = ` ${timeLeft}s`;
@@ -1293,9 +1296,9 @@ let loadFile;
 
 // Define an array of local image paths
 const localImages = [
-  "./assets/blocks/image1.jpg", // Adjust these paths to match your file structure
-  "./assets/blocks/image2.jpg",
-  "./assets/blocks/image3.jpg",
+  "./assets/blocks/image1.png", // Adjust these paths to match your file structure
+  "./assets/blocks/image2.png",
+  "./assets/blocks/image3.png",
 ];
 
 
